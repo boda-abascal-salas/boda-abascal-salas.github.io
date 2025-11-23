@@ -1,5 +1,6 @@
 body {
     font-family: Quicksand, sans-serif;
+    background: #F2D6CE;
 
     width: 100%;
     height: 100vh;
@@ -7,7 +8,11 @@ body {
 }
 
 #cover {
-    background: #F2D6CE;
+    background:
+      linear-gradient(to bottom, rgba(144, 181, 200, 0.5) 0%, rgba(144, 181, 200, 0.5) 50%, rgba(144, 181, 200, 0.5) 100%),
+      url('cover.jpg');
+    background-position: center;
+    background-size:cover;
 
     width: 100%;
     height: 100vh;
@@ -17,6 +22,8 @@ body {
 }
 
 #cover-text {
+    font-family: 'Brush Script MT', cursive;
+    color: #B59410;
     font-size: 130px;
     font-weight: 400;
     font-style: normal;
@@ -32,16 +39,13 @@ body {
 }
 
 #name1, #name2 {
-    font-family: 'Brush Script MT', cursive;
-    color: #B59410;
 }
 
 #namePlus {
-    font-family: 'Brush Script MT', cursive;
-    color: #F2D6CE;
-    background: rgba(181,148,16,0.5);
-
-    border-radius: 50%;
     padding: 0 57px 0 39px;
     margin: 0 45px;
+}
+
+#clock {
+    height: 100%;
 }
