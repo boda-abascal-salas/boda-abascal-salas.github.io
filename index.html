@@ -22,7 +22,59 @@
         <div id="name2">Lorena</div>
     </div>
 </section>
-<section id="clock">
+<section id="countdown">
+    <div id="countdown-intro">Faltan</div>
+    <div id="countdown-watch">
+        <div class="days">
+            <div class="number"></div>
+            <div class="text">días</div>
+        </div>
+        <div class="hours">
+            <div class="number"></div>
+            <div class="text">hs</div>
+        </div>
+        <div class="minutes">
+            <div class="number"></div>
+            <div class="text">min</div>
+        </div>
+        <div class="seconds">
+            <div class="number"></div>
+            <div class="text">seg</div>
+        </div>
+    </div>
+    <script>
+        var countdownDate = Date.parse("2026-09-12T12:00:00+0100");
+        var countdownWatch = document.getElementById("countdown-watch");
+        var days = countdownWatch
+            .getElementsByClassName("days")[0]
+            .getElementsByClassName("number")[0];
+        var hours = countdownWatch
+            .getElementsByClassName("hours")[0]
+            .getElementsByClassName("number")[0];
+        var minutes = countdownWatch
+            .getElementsByClassName("minutes")[0]
+            .getElementsByClassName("number")[0];
+        var seconds = countdownWatch
+            .getElementsByClassName("seconds")[0]
+            .getElementsByClassName("number")[0];
+
+        var countdown = function() {
+            var ms = countdownDate - Date.now();
+
+            var d = ms < 0 ? 0: Math.floor(ms / (1000 * 60 * 60 * 24));
+            var h = ms < 0 ? 0: Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var m = ms < 0 ? 0: Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+            var s = ms < 0 ? 0: Math.floor((ms % (1000 * 60)) / 1000);
+
+            days.innerHTML = d;
+            hours.innerHTML = h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+        }
+
+        countdown();
+        setInterval(countdown, 1000);
+    </script>
 </section>
 </body>
 </html>
