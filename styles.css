@@ -12,6 +12,7 @@
 
     --countdown-size: 300px;
     --countdown-background: rgb(250, 250, 250);
+    --countdown-container: url('countdown-rings.svg');
     --countdown-border: 5px solid rgb(148, 122, 84);
 }
 
@@ -83,6 +84,16 @@ body {
     justify-content: center;
 }
 
+#countdown-container {
+    width: calc(var(--countdown-size) + 150px);
+    height: calc(var(--countdown-size) + 150px);
+    background: var(--countdown-container) center center no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #countdown-box {
     width: var(--countdown-size);
     height: var(--countdown-size);
@@ -96,7 +107,8 @@ body {
     justify-content: center;
 }
 #countdown-intro {
-    font-size: 35px;
+    font-family: var(--title-font);
+    font-size: 45px;
     height: 50px;
 }
 #countdown-watch {
