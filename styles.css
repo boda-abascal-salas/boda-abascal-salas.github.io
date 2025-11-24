@@ -1,8 +1,11 @@
 * {
+    --white: rgb(250, 250, 250);
+    --gray: rgb(87, 87, 87);
+
     --background: rgba(252, 246, 241, 1);
     --text-font: 'Roboto', sans-serif;
     --text-size: 16px;
-    --text-color: rgb(87, 87, 87);
+    --text-color: var(--gray);
 
     --cover-background: rgba(144, 181, 200, 0.5);
     --cover-transition: rgba(252, 246, 241, 0.65);
@@ -11,7 +14,7 @@
     --title-color: #B59410;
 
     --countdown-size: 300px;
-    --countdown-background: rgb(250, 250, 250);
+    --countdown-background: var(--white);
     --countdown-container: url('countdown-rings.svg');
     --countdown-border: 5px solid rgb(148, 122, 84);
 }
@@ -166,3 +169,47 @@ body {
 	10% {transform: scale(1.1)}
 }
 
+#schedule {
+    padding-bottom: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#schedule > * {
+    width: 100%;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#schedule .heading {
+    font-family: var(--title-font);
+    color: var(--white);
+    font-size: 30px;
+    background: var(--gray);
+    padding: 8px;
+    width: 360px;
+    text-align: center;
+    clip-path: polygon(
+          0%   0%,
+        100%   0%,
+         90%  50%,
+        100% 100%,
+          0% 100%,
+         10%  50%);
+}
+#schedule .info {
+    padding-top: 15px;
+}
+@media (min-width: 850px) {
+    #schedule > * {
+        width: 50%;
+    }
+    ·schedule > *:first-child {
+        padding-bottom: 50px;
+    }
+}
