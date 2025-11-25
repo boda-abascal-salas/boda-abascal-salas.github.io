@@ -29,7 +29,25 @@ body {
     height: 100vh;
     margin: 0px;
 }
-
+.heading {
+    font-family: var(--title-font);
+    color: var(--white);
+    font-size: 30px;
+    background: var(--gray);
+    padding: 8px;
+    width: 360px;
+    text-align: center;
+    clip-path: polygon(
+          0%   0%,
+        100%   0%,
+         90%  50%,
+        100% 100%,
+          0% 100%,
+         10%  50%);
+}
+.info {
+    margin-top: 15px;
+}
 .button {
     background: var(--title-color);
     color: var(--white);
@@ -181,7 +199,6 @@ body {
 }
 
 #schedule {
-    padding-bottom: 100px;
     width: 100%;
     display: flex;
     flex-flow: wrap;
@@ -197,25 +214,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-#schedule .heading {
-    font-family: var(--title-font);
-    color: var(--white);
-    font-size: 30px;
-    background: var(--gray);
-    padding: 8px;
-    width: 360px;
-    text-align: center;
-    clip-path: polygon(
-          0%   0%,
-        100%   0%,
-         90%  50%,
-        100% 100%,
-          0% 100%,
-         10%  50%);
-}
-#schedule .info {
-    margin-top: 15px;
-}
 @media (min-width: 850px) {
     #schedule > * {
         width: 50%;
@@ -223,4 +221,19 @@ body {
     ·schedule > *:first-child {
         padding-bottom: 50px;
     }
+}
+
+#links {
+    padding-bottom: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
